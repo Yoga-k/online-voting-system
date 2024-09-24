@@ -1,5 +1,5 @@
 SRC = main.c
-OBJ_FILES = $(SRC:%c=%o)
+OBJ_FILES = $(patsubst %c, %o, $(SRC))
 main: main.o
 	gcc $^ -o $@
 
