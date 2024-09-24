@@ -1,5 +1,6 @@
-OBJ_FILES = main.o
-main: $(OBJ_FILES)
+SRC = main.c
+OBJ_FILES = $(SRC:%c=%o)
+main: main.o
 	gcc $^ -o $@
 
 
