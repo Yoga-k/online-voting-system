@@ -1,4 +1,4 @@
-SRC = main.c
+SRC = $(shell find -iname "*.c")
 OBJ_FILES = $(patsubst %c, %o, $(SRC))
 main: main.o
 	gcc $^ -o $@
