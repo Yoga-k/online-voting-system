@@ -1,6 +1,6 @@
 OBJ_FILES = main.o
-main: main.o
-	gcc $(OBJ_FILES) -o $@
+main: $(OBJ_FILES)
+	gcc $^ -o $@
 
 
 %.o: %.c
