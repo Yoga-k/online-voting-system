@@ -1,10 +1,10 @@
-
+OBJ_FILES = main.o
 main: main.o
-	gcc $< -o $@
+	gcc $(OBJ_FILES) -o $@
 
 
-main.o: main.c
-	gcc -c main.c
+%.o: %.c
+	gcc -c $^
 
 run: main
 	./main
